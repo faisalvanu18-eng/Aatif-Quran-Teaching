@@ -45,3 +45,13 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 revealEls.forEach(el => io.observe(el));
+// Back to Top smooth scroll
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+backToTopBtn?.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
